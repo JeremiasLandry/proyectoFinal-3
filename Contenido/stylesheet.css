@@ -1,0 +1,425 @@
+/* ESTILOS GENERALES */
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+body{
+    background-color:transparent;
+    overflow-x: hidden;
+}
+.encabezado{
+    display: flex;
+    flex-wrap: nowrap;
+    width:100%;
+    background-color:transparent;
+    position:absolute;
+    z-index: 11000000;
+    box-shadow: 3px 60px 21px -38px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 3px 60px 21px -38px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 3px 60px 21px -38px rgba(0,0,0,0.75) inset;
+    justify-content: space-between;
+}
+
+.mainBanner{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    grid-area: encabezado;
+    margin:0;
+}
+
+#logotipo{
+    font-family: 'Indie Flower', cursive;
+    z-index: 11000001;
+    color:#fff;
+    font-size:30px;
+    margin:10px 15px;
+    text-decoration: none;
+    transition:transform .3s ease-in;
+}
+#logotipo:hover{
+    transform:scale(.92,.92);
+}
+/* CONTENEDOR DEL SLOGAN DE LA PAGINA INICIO */
+
+.slogan{
+    z-index: 1;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    margin: auto auto;
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+}
+/* BOTON DEBAJO DEL SLOGAN */
+.slogan a{
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    margin: auto auto;
+    margin-top: 35px; 
+    align-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 1;
+    text-decoration: none;
+    outline: 1px solid #fff;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform .5s ease-in;
+}
+.slogan a:hover{
+    transform:scale(.9,.9)
+}
+/* TITULO DE BIENVENIDO DENTRO DEL CONTENEDOR SLOGAN */
+.mainBanner span{
+    display:flex;
+    color: #fff;
+    justify-content:center;
+    margin: auto auto;
+    margin-bottom:0;
+    align-content: center;
+    align-items: center;
+    font-size: 4em;
+    z-index: 1;
+    text-align: center;
+}
+/* VIDEO DE FONDO */
+.backgroundVideo{
+    position: absolute;
+	height:100%;
+	z-index: -1000;
+	width:100%;
+    bottom:0;
+	overflow: hidden;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+    align-content: center;
+    filter: brightness(49%);
+    -webkit-filter: brightness(49%);
+    -moz-filter: brightness(49%);
+}
+.backgroundVideo video {
+    width: auto;
+	height: 1080px;
+	margin: auto auto;
+	bottom:0;
+    display: flex;
+    position:absolute;
+    bottom:0;
+    justify-content:flex-start;
+	align-items:flex-start;
+    align-content: flex-start;
+}
+/* FOOTER */
+
+.footerGrid{
+    display:grid;
+    grid-template-rows:100%;
+    grid-template-columns:50% 50%;
+    grid-template-areas: "ladoIzq ladoDer";
+}
+.LadoIzq{
+    grid-area: ladoIzq;
+    display: flex;
+    justify-content:flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+.LadoDer{
+    grid-area: ladoDer;
+    display: flex;
+    justify-content:flex-end;
+    align-content: center;
+    align-items: center;
+}
+.LadoDer p{
+    margin: 0 15px;
+}
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 25px;
+}
+footer a{
+    text-decoration:underline;
+    color: #fff;
+
+}
+footer a:hover{
+    color: blueviolet;
+}
+
+/* ESTILOS DEL INDEX */
+.mainGrid{
+    display:grid;
+    grid-template-areas: "encabezado"
+                          "parteDeAbajo";
+    grid-template-rows:100vh 800px;
+    
+}
+#eventoCard{
+    margin:auto auto;
+    background-color:#000;
+    color: #fff;
+}
+
+
+    /* seccion de EVENTOS Y LISTA DE EVENTOS */
+.listaDePlatos{
+    background-color:rgb(37, 37, 37);
+    background-image: url(multimedia/comidaFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -1px 129px 55px -45px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: -1px 129px 55px -45px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: -1px 129px 55px -45px rgba(0,0,0,0.75) inset;
+    padding-bottom: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    flex-direction:column;
+    margin:0;
+}
+
+.eventoDestacadoPic{
+    max-width:500px;
+    max-height:400px;
+    width: auto;
+    display:flex;
+    border-radius: 5px;
+    transition: transform .5s ease-in;
+}
+.eventoDestacadoPic:hover{
+    transform:scale(.97,.97);
+    cursor:pointer;
+}
+
+.platosDestacadosTitulo{
+    background-color: transparent;
+    color:#fff;
+    padding: 5px;
+    padding-bottom: 100px;
+    margin-bottom:5px;
+    text-align: center;
+    font-size:4em;
+}
+.eventoFotoAndInfo{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding: 25px;
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    margin:0 10%;
+    border-radius:20px;
+}
+.eventoDescripcion{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+    margin-left: 20px;
+}
+/* boton CONTACTAR */
+.eventoDescripcion a{
+    color: #fff;
+    display:flex;
+    justify-content:flex-end; 
+    align-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-decoration: none;
+    outline: 1px solid #fff;
+    padding: 15px;
+    margin-top:3em;
+    border-radius: 10px;
+    transition: transform .5s ease-in;
+}
+.eventoDescripcion a:hover{
+    transform:scale(.9,.9);
+}
+.nombrePlato{
+    display:block;
+    text-align:left;
+    font-size: 2em;
+    font-weight: bold;
+}
+.descripcionPlato{
+    display: inline-block;
+    padding:5px 0;
+}
+
+/* ESTILOS DE 'NUESTRA CARTA' */
+.aperitivos{
+    list-style-type: none;
+}
+.aperitivos li{
+    padding:5px 0;
+}
+.antipasti{
+    object-fit: cover;
+}
+/* ESTILOS DE 'RESERVAR' */
+.reservarGrid{
+    display:grid;
+    grid-template-areas:'titulo';
+    grid-template-rows:100%;
+    height:100vh;
+}
+.reservarSection{
+    width:100%;
+    height:100%;
+    grid-area: titulo;
+}
+.ReservaTitle{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: auto auto;
+    width: 100%;
+    height:100vh;
+}
+.allCardsContainer{
+    display: flex;
+    justify-content:center;
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+    margin:auto auto;
+}
+.reservarCard-Container{
+    max-width: 70%;
+    display: flex;
+    margin: auto auto;
+    justify-content:flex-end;
+    margin-bottom: 20px;
+}
+.reservarCards{
+    display:flex;
+    flex-direction: column;
+    padding-top:20px;
+    padding-bottom:20px;
+    justify-content:space-between;
+    height:auto;
+    min-height:200px;
+    align-items: center;
+    background-color: #000;
+    color:#fff;
+    
+}
+.reservarCards p{
+    padding:10px;
+}
+
+.instructionsTitle{
+    font-size:2em;
+}
+/* ESTILOS DE CONTACTO */
+
+.contactPage{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: auto auto;
+    width: 100%;
+    height:100vh;
+}
+.contactPage h2{
+    color:#fff;
+    font-size: 4em;
+}
+/* CONTENEDOR NEGRO */
+.contactContainerBox{
+    display:flex;
+    flex-direction: column;
+    width:auto;
+    max-width: 800px;
+    height:400px;
+    min-width:400px;
+    background-color: #000;
+    border-radius:20px;
+    padding:20px;
+    margin-top:50px;
+    outline: 2px solid #fff;
+}
+/* DESCRIPCION DE LA CAJA NEGRA */
+.contactBox{
+    display:flex;
+    color:#fff;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+.contactBox h3{
+    font-size: 2.7em;
+    padding-bottom:20px;
+}
+/* INFORMACION SOBRE COMO CONTACTAR */
+.contactInfo{
+    display:grid;
+    grid-template-areas:'izq der';
+    grid-template-columns: 50% 50%;
+    margin-top: 25px;
+
+}
+.contact-ladoIzq{
+    grid-area:izq;
+    height: 100%;
+    width:100%;
+    color: #fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+.contact-ladoDer{
+    grid-area:der;
+    height: 100%;
+    width:100%;
+    color: #fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: center;
+}
+.contact-ladoDer p{
+    padding:25px 0;
+}
+.contact-ladoIzq p{
+    padding:25px 0;
+}
+.socialMedia{
+    padding:0 10px;
+    padding-top:25px;
+}
+.socialMedia a{
+    color:#fff;
+}
+
+/* ESTILOS DE 'NOSOTROS' */
+
+
+@media screen and (min-width:1205px){
+    #eventoCard{
+        margin:50px auto;
+    }
+}
